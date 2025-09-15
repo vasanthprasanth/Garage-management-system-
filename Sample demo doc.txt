@@ -1,0 +1,154 @@
+
+
+PROJECT TITLE:GARAGE MANAGEMENT SYSTEM 
+
+COLLEGE NAME: PPG COLLEGE OF ARTS   AND SCIENCE
+SARAVANAMPATTI P.O, COIMBATORE - 641035
+COLLEGE CODE: bruap
+DEGREE: B.sc Computer Science      (Artificial Intelligence)
+(Ill-rd year )
+
+
+TEAM ID: NM2025TMID25934
+TEAM SIZE: 5
+Team Leader: VASANTH.VM
+Email: 2328f0026.cas@ppg.edu.in
+Team Member: LALITH KISHORE.S
+Email: 2328f0030.cas@ppg.edu.in
+Team Member:KARTHIK.D
+Email: 2328f0028.cas@ppg.edu.in
+Team Member:VISHWA.T
+Email: 2328f0027.cas@ppg.edu.in
+Team Member:MANJU.M
+Email: 2328f0029.cas@ppg.edu.in
+
+
+Completed the project using this email :2328f0026.cas@ppg.edu.in
+
+
+
+Documents for Garage Management System (Project Report Set)
+	1.	Problem Statement
+	2.	Objective
+	3.	Existing System & Limitations
+	4.	Proposed System
+	5.	System Requirements (Hardware & Software)
+	6.	System Design (DFD / ER Diagram / UML)
+	7.	Modules Description
+	8.	Implementation (Technologies & Sample Code Snippets)
+	9.	Advantages of the System
+	10.	Conclusion & Future Enhancements
+
+⸻
+
+1. Problem Statement
+
+Managing garage operations like vehicle service booking, spare parts inventory, billing, and customer details manually is time-consuming and error-prone. There is a need for a computerized Garage Management System that automates tasks for mechanics, managers, and customers.
+
+⸻
+
+2. Objective
+	•	To computerize garage operations.
+	•	To maintain customer and vehicle records.
+	•	To manage spare parts stock efficiently.
+	•	To generate bills and service reports automatically.
+	•	To improve customer satisfaction through faster service.
+
+⸻
+
+3. Existing System & Limitations
+	•	Manual record keeping in registers.
+	•	Difficult to track service history of vehicles.
+	•	No proper inventory management for spare parts.
+	•	Billing is time-consuming and error-prone.
+
+⸻
+
+4. Proposed System
+	•	Online/offline software application to manage garage services.
+	•	Customers can book service slots.
+	•	Admin can assign work to mechanics.
+	•	Inventory management for spare parts.
+	•	Automated bill generation and service history tracking.
+
+⸻
+
+5. System Requirements
+
+Hardware:
+	•	Processor: Intel i3 or above
+	•	RAM: 4 GB minimum
+	•	Hard Disk: 250 GB
+
+Software:
+	•	Frontend: HTML, CSS, JavaScript / React
+	•	Backend: PHP / Python / Java / Node.js
+	•	Database: MySQL / MongoDB
+	•	Tools: Visual Studio Code / Eclipse
+
+⸻
+
+6. System Design
+	•	ER Diagram: Entities – Customer, Vehicle, Mechanic, Service, Spare Parts, Bill.
+	•	DFD (Level 0): Customer → Book Service → Admin Assigns → Mechanic Updates → System Generates Bill.
+	•	UML Use Case: Actors – Customer, Admin, Mechanic.
+
+⸻
+
+7. Modules Description
+	1.	Login Module – Secure login for admin, mechanic, and customers.
+	2.	Customer Module – Customer registration, service booking, vehicle details.
+	3.	Mechanic Module – Assigned job details, status updates.
+	4.	Service Module – Record service type (oil change, repair, painting, etc.).
+	5.	Inventory Module – Spare parts stock management.
+	6.	Billing Module – Automatic bill generation.
+	7.	Report Module – Monthly income and service reports.
+
+⸻
+
+8. Implementation (Example in PHP + MySQL)
+
+Database Table Example – Customer:
+
+CREATE TABLE Customer (
+   customer_id INT PRIMARY KEY AUTO_INCREMENT,
+   name VARCHAR(50),
+   phone VARCHAR(15),
+   email VARCHAR(50),
+   vehicle_no VARCHAR(20)
+);
+
+Sample PHP Code for Service Booking:
+
+<?php
+include("db.php");
+
+if(isset($_POST['book'])){
+    $name = $_POST['name'];
+    $vehicle = $_POST['vehicle'];
+    $service = $_POST['service'];
+
+    $sql = "INSERT INTO bookings (name, vehicle, service) VALUES ('$name','$vehicle','$service')";
+    mysqli_query($conn, $sql);
+    echo "Service Booked Successfully!";
+}
+?>
+
+9. Advantages
+	•	Easy management of garage operations.
+	•	Saves time and reduces errors.
+	•	Service history available for future reference.
+	•	Better customer satisfaction.
+	•	Efficient spare parts stock tracking.
+
+⸻
+
+10. Conclusion & Future Enhancements
+
+The Garage Management System automates and streamlines garage operations.
+Future Enhancements:
+	•	Mobile app integration.
+	•	Online payment gateway.
+	•	Vehicle tracking using IoT.
+	•	SMS/Email notifications for customers.
+
